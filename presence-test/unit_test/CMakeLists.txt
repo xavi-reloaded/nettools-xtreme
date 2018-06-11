@@ -1,4 +1,4 @@
-#include_directories(../lib/gtest-1.7.0/include ../lib/gtest-1.7.0)
+#include_directories(../libtins/gtest-1.7.0/include ../libtins/gtest-1.7.0)
 include_directories(../lib/googletest-release-1.6.0/include ../lib/googletest-release-1.6.0)
 
 
