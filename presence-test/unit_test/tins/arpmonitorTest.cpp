@@ -14,7 +14,7 @@ TEST(arpmonitor, init)
 
     Sniffer sniffer("wlp2s0", config);
     // Only capture arp packets
-    monitor.run(sniffer);
+//    monitor.run(sniffer);
 
     EXPECT_EQ(1, true);
 }

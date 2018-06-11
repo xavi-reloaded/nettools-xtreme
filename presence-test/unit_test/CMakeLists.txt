@@ -7,7 +7,9 @@ add_executable(presence-test
         db/LevelDBConfigTest.cpp
         scanner/arpscannerTest.cpp
         scanner/arpTest.cpp
-        tins/arpmonitorTest.cpp)
+        tins/arpmonitorTest.cpp
+        tins/phonescannerTest.cpp
+        tins/syn-scanTest.cpp)
 
 
 target_link_libraries(presence-test presence_lib)
