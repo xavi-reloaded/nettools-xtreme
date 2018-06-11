@@ -9,7 +9,8 @@ add_executable(presence-test
         scanner/arpTest.cpp
         tins/arpmonitorTest.cpp
         tins/phonescannerTest.cpp
-        tins/syn-scanTest.cpp)
+        tins/syn-scanTest.cpp
+        tins/icmp_responsesTest.cpp)
 
 
 target_link_libraries(presence-test presence_lib)
