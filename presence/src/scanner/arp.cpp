@@ -76,7 +76,7 @@ void Arp::getInfo()
 	if (device)
 	{
 		cout.flags(ios::left);
-		cout << setw(20) << "Device name :" << libnet_getdevice(this->handle) << endl;
+		cout << endl << setw(20) << "Device name :" << libnet_getdevice(this->handle) << endl;
 	}
 	in_addr inaddr;
 	inaddr.s_addr = libnet_get_ipaddr4(this->handle);
@@ -85,13 +85,14 @@ void Arp::getInfo()
 		cout.flags(ios::left);
 		cout << setw(20) << "IP Address :" << inet_ntoa(inaddr) << endl;
 	}
+
 	libnet_ether_addr *phAddr;
 	phAddr = libnet_get_hwaddr(this->handle);
 	if (phAddr)
 	{
 		cout.flags(ios::left | ios::hex);
 		cout << setw(20) << "Physicial Address :" << setfill('0') << setw(2)
-			<< (int)phAddr->ether_addr_octet[0] 
+			<<        (int)phAddr->ether_addr_octet[0]
 			<< "-" << (int)phAddr->ether_addr_octet[1]
 			<< "-" << (int)phAddr->ether_addr_octet[2]
 			<< "-" << (int)phAddr->ether_addr_octet[3]
@@ -99,6 +100,7 @@ void Arp::getInfo()
 			<< "-" << (int)phAddr->ether_addr_octet[5]
 			<< endl;
 	}
+
 	return;
 }
 
@@ -159,7 +161,7 @@ libnet_ptag_t Arp::build_packet(libnet_ether_addr *srcPhAddr,
 }
 
 int Arp::arp(char *strSrcPhAddr, 
-	char *strSrcProAddr, 
+	char *strSrcProAddr, //protocol address
 	char *strDstPhAddr, 
 	char *strDstProAddr, 
 	const int op)

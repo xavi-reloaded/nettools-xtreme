@@ -8,7 +8,7 @@ TEST(Arp, init)
 {
     Arp *sut = new Arp();
     sut->getInfo();
-//    return sut->arp(argv[2], argv[3], argv[4], argv[5], arp.op_reply);
+    std::cout << sut->arp("", "", "", "", 1) << endl;
     EXPECT_EQ(1, true);
 }
 
