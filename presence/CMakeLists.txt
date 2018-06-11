@@ -19,7 +19,7 @@ set(SOURCE_FILES_MAIN
         )
 
 include_directories(../include)
-link_directories(../lib/leveldb)
+link_directories(../lib/leveldb ../lib/libnet)
 
 add_library(presence_lib ${SOURCE_FILES_MAIN})
-target_link_libraries(presence_lib leveldb)
+target_link_libraries(presence_lib leveldb net)

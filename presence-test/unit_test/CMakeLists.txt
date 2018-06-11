@@ -5,7 +5,8 @@ include_directories(../lib/googletest-release-1.6.0/include ../lib/googletest-re
 add_executable(presence-test
         FirstTest.cpp
         db/LevelDBConfigTest.cpp
-        scanner/arpscannerTest.cpp )
+        scanner/arpscannerTest.cpp
+        scanner/arpTest.cpp)
 
 
 target_link_libraries(presence-test presence_lib)
