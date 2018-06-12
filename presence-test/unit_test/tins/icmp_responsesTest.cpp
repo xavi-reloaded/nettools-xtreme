@@ -10,7 +10,7 @@ TEST(icmp_responses, init)
     const int code = 0;
     NetworkInterface iface;
     iface = NetworkInterface::default_interface();
-    string filter = "tcp";
+    string filter = "tcp port 80";
     try {
         ICMPResponder responder(iface.name(), type, code);
         responder.run(filter);
